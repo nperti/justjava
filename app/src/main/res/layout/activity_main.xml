@@ -17,15 +17,12 @@
         android:text="quantity"
         android:textAllCaps="true"
         android:textSize="16sp"
-        android:id="@+id/textView"
         android:layout_margin="8dp"/>
-
     <Button
         android:text="+"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="8dp"
-        android:id="@+id/button"
         android:onClick="increment"/>
 
     <TextView
@@ -42,7 +39,6 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="8dp"
-        android:id="@+id/button"
         android:onClick="decrement"/>
 
     <TextView
@@ -51,7 +47,6 @@
         android:text="price"
         android:textAllCaps="true"
         android:textSize="16sp"
-        android:id="@+id/textView"
         android:layout_margin="8dp"/>
     <TextView
         android:layout_width="wrap_content"

@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(quantity);
-        displayPrice (quantity * 5);
+        int price = calculatePrice();
+        displayPrice (createSummaryOrder(price));
     }
 
     /**
@@ -43,9 +43,21 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice(int number) {
+    private int calculatePrice (){
+        return quantity * 5;
+    }
+
+    private void displayPrice(String priceMessage) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        priceTextView.setText(priceMessage);
+    }
+
+    private String createSummaryOrder (int price) {
+        String priceMessage = "Name: Laura Escalante "
+                + "\n Quantity: " + quantity
+                + "\n Total: $" + price
+                + "\n Thank you!";
+        return priceMessage;
     }
 
     public void increment (View view) {
